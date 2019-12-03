@@ -4,7 +4,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage[margin=1in]{geometry}
-\usepackage[usenames,dvipsnames]{color}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{textcomp}
@@ -14,8 +13,10 @@
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 
+\definecolor{blue(pigment)}{rgb}{0.2,0.2,0.6}
+
 % Formatting
-\hypersetup{colorlinks= true, linkcolor=black}
+\hypersetup{colorlinks= true, linkcolor=blue(pigment)}
 \spanishdecimal{.}
 \tolerance=1000
 \hyphenpenalty=1000
@@ -38,9 +39,11 @@
 \renewcommand{\footrulewidth}{0 pt}
 \headheight=75pt
 
-\theoremstyle{plain}
-\newtheorem{art}{Art.} % Para que salga Art.+Nro
-\newtheorem{art_trans}{Art.}
+% Article Environment
+\newcounter{art}
+\newenvironment{art}{
+    Art.\refstepcounter{art} \theart\:
+}{}
 
 %\titleformat{\section}[display]{\scshape \Large}{Título \thesection:}{}{}[]
 
@@ -114,13 +117,13 @@
 \end{art}
 
 \begin{art}\label{atribucionesEstudiantes}
-	Son atribuciones de los estudiantes:
+	Son atribuciones de los estudiantes representados:
 	\begin{enumerate}
 		\item Manifestar libremente su opinión en las Asambleas Generales y otros espacios destinados por el CAM para tal efecto.
 		\item Publicar información y/u opiniones en espacios destinados por el CAM, siempre y cuando el CAM no ponga objeciones.
 		\item Participar en las actividades que organice el CAM.
 		\item Exigir información sobre el trabajo del CAM en forma oral o escrita.
-		\item Proponer proyectos al CAM.
+		\item Proponer proyectos a la Directiva.
 		\item Solicitar espacios, equipos y/o materiales que sean del CAM para realizar actividades que brinden beneficios a la comunidad universitaria.
 	\end{enumerate}
 \end{art}
@@ -138,7 +141,7 @@
 \begin{art}\label{definicionesOrganismos}
 	Los organismos directivos del CAM son los siguientes:
 	\begin{enumerate}
-		\item Directiva: Está conformada por cinco miembros por cinco miembros. En orden:
+		\item Directiva: Está conformada por cinco miembros. En orden jerárquico:
 		\begin{enumerate}
 			\item Presidente
 			\item Vicepresidente Interno
@@ -146,13 +149,13 @@
 			\item Secretario General
 			\item Tesorero
 		\end{enumerate}
-		\item Consejo de Delegados: Se conformará por los delegados de cada generación de cada carrera, un delegado de Postgrado y un delegado correspondiente a todos los estudiantes no considerados en los grupos anteriores. Las generaciones corresponden al año de ingreso a la carrera hasta cinco años antes del actual en caso de Estadística y hasta cuatro años en el caso de Matemáticas.
+		\item Consejo de Delegados: Se conformará por los delegados de cada generación de cada carrera, un delegado de Postgrado y un delegado correspondiente a todos los estudiantes no considerados en los grupos anteriores. Las generaciones corresponden al año de ingreso a la carrera hasta cinco años antes del actual en caso de Estadística y hasta cuatro años en el caso de Matemáticas. % TODO Refrasear ultima oración, sería algo como año actual - largo de carrera + 1 generaciones por carrera.
 		\item Consejerías Académicas: Hay dos consejerías académicas, cada una corresponde a una carrera de pregrado, y cada una está conformada por un Consejero y un Subconsejero.
-		\item Consejo Estudiantil: Está conformado por el Consejo de Delegados, las Consejerías Académicas, el Consejero Territorial y dos miembros de la Directiva del CAM. Los Consejos que se convoquen serán abiertos y podrá participar con derecho a voz todo estudiante que así lo desee.
+		\item Consejo Estudiantil: Está conformado por el Consejo de Delegados, las Consejerías Académicas, el Consejero Territorial y dos miembros de la Directiva del CAM. Los Consejos que se convoquen serán abiertos y podrá participar con derecho a voz todo estudiante representado que así lo desee.
 	\end{enumerate}
 \end{art}
 
-\begin{art}
+\begin{art}\label{}% TODO Mover a vacancias.
 	Todo cargo se pierde:
 	\begin{enumerate}
 		\item Renuncia voluntaria
@@ -166,10 +169,10 @@
 \end{art}
 
 \begin{art}
-	Los estudiantes que estén en el proceso de cambio de carrera serán representados por el CAM hasta que el cambio se haga efectivo, además al hacerse efectivo el cambio el estudiante deberá informar este cambio a los respectivos centros de estudiantes.
+	Los estudiantes que estén en el proceso de cambio de carrera serán representados por el CAM hasta que el cambio se haga efectivo, además al hacerse efectivo el cambio el estudiante deberá informar esto a los respectivos centros de estudiantes.
 \end{art}
 
-\section{De las funciones y Atribuciones}\label{funcionesAtribuciones}
+\section{De las Funciones y Atribuciones}\label{funcionesAtribuciones}
 \begin{art}\label{funcionesDirectiva}
 	Son funciones, atribuciones y deberes de la Directiva:
 	\begin{enumerate}
@@ -177,15 +180,15 @@
 		\item La Directiva por tanto tendrá que convocar a lo menos dos asambleas por semestre.
 		\item Crear y promover el desarrollo de actividades de orden estudiantil y/o de formación general e integral en el estudiantado.
 		\item Crear y promover cargos participativos (i.e. vocalías) para el estudiantado.% TODO Rewrite, add stuff about vocalías
-		\item Pronunciarse ante los problemas estudiantiles y sociales, e informar su postura al respecto.
+		\item Pronunciarse ante los problemas estudiantiles y sociales, e informar su postura al respecto. % ? Revisar de nuevo
 		\item Representar ante autoridades universitarias, organismos superiores y la Federación de Estudiantes (FEUC), a los estudiantes representados.
 		\item Administrar los bienes que estén a disposición del CAM.
-		\item Convocar a sesiones ordinarias y extraordinarias de la Asamblea General.
+		\item Convocar a sesiones ordinarias y extraordinarias de la Asamblea General. % ? Revisar con respecto a lo escrito en la sección de Asambleas Generales
 		\item Informar a los estudiantes de las actividades realizadas y a realizar.
 		\item Ningún miembro de la directiva podrá abstenerse en una votación de Asamblea General.
-		\item Asistir a los Consejos de Federación, de Facultad y Estudiantil.
+		\item Asistir a los Consejos de Federación, de Facultad y Estudiantil según corresponda.
 		\item En cuanto a la toma de decisiones, la directiva tendrá la facultad de sesionar cuantas veces estime conveniente para cumplir con las funciones que contemple el actual estatuto.
-		\item Las decisiones serán tomadas  luego del acuerdo de la totalidad de la Directiva, o como los miembros de esta estimen conveniente.
+		\item Las decisiones serán tomadas luego del acuerdo de la totalidad de la Directiva, o como los miembros de esta estimen conveniente.
 		\item Todas las demás disposiciones que el presente estatuto estipule.
 	\end{enumerate}
 \end{art}
@@ -198,7 +201,7 @@
 		\item Asegurar una estructura eficiente en las Asambleas Generales.
 		\item Presidir reuniones de Directiva.
 		\item Realizar que sea dos cuentas públicas cada semestre, una al principio y otra al final del semestre, donde se deberá entregar una evaluación con los hitos más importantes del semestre, junto con un estado financiero que refleje el gasto de dinero del CAM.
-	\end{enumerate}
+	\end{enumerate}% ? Añadir la posibilidad de agregar cargos opcionales de la forma que mencionan los estatutos del CAi, en el artículo 6.A(4)
 \end{art}
 
 \begin{art}\label{funcionesVicepresidenteInterno}
@@ -336,7 +339,7 @@
 \end{art}
 
 \begin{art}\label{eleccionesCAMVotacion}
-	Para que la elección tenga validez se debe cumplir con los puntos descritos en la sección \ref{votaciones}
+	Para que la elección tenga validez se debe cumplir con los puntos descritos en la sección \ref{votaciones}.
 \end{art}
 
 \subsection{De la elección de la Consejería Académica}\label{eleccionesConsejeria}
@@ -346,7 +349,7 @@
 \end{art}
 
 \begin{art}\label{eleccionesConsejeriaFalla}
-	Si al final del plazo de inscripción no hay postulaciones, se agregará un plazo extraordinario a lo más de cinco días hábiles. En caso de no haber una postulación en este plazo extraordinario, el vicepresidente interno tomará el rol de Consejero Académico.
+	Si al final del plazo de inscripción no hay postulaciones, se agregará un plazo extraordinario a lo más de cinco días hábiles. En caso de no haber una postulación en este plazo extraordinario, el vicepresidente interno tomará el rol de Consejero Académico. % TODO Discutir la última frase
 \end{art}
 
 \begin{art}\label{eleccionesConsejeriaVotacion}
@@ -360,7 +363,7 @@
 \end{art}
 
 \begin{art}\label{eleccionesDelegadosCandidatos}
-	Todo estudiante de la Facultad de Matemáticas podrá postularse a ser Delegado de su generación. La elección se conformará por votaciones por generación. Entendiéndose generación de la forma descrita en el artículo \ref{definicionesOrganismos}.% ? refrasear 
+	Todo estudiante de la Facultad de Matemáticas podrá postularse a ser Delegado de su generación. La elección se conformará de votaciones por generación. Entendiéndose generación de la forma descrita en el artículo \ref{definicionesOrganismos}.% ? refrasear
 \end{art}
 
 \begin{art}\label{eleccionesDelegadosPostulacionUnica}
@@ -413,46 +416,91 @@
 \end{art}
 
 \section{De Vacancias, Destituciones y Renuncias}\label{vacancias}
-\subsection{Vacancias}\label{vacancias}
-% TODO Rellenar con lo del grupo de la Angela
-
 \subsection{Destituciones}\label{destituciones}
-% TODO Rellenar con las especificaciones bajo las cuales se pierde un cargo, o es destituido por el Consejo Estudiantil
-	
+% TODO Rellenar con las especificaciones bajo las cuales se pierde un cargo, o es destituido por el Consejo Estudiantils
+\begin{art}\label{}
+    Cualquier miembro de la Directiva puede ser destituido por acuerdo de la Asamblea General, con la aprobación de la mayoría absoluta de ésta, siempre y cuando dicha asamblea tenga una asistencia mayor o igual al 35\% de los estudiantes de la Facultad. En caso contrario, será necesario hacer un plebiscito.
+\end{art}
+
 \subsection{Renuncias}\label{renuncias}
 % TODO Rellenar con los plazos y acciones a tomar bajo renuncias.
 
-\section{De las Votaciones}\label{votaciones}
-% TODO Rellenar con los mínimos para toda votación
-
-\section{Del Plebiscito}\label{plebiscito}
-% ? REDO
-
-\begin{art}\label{plebiscitoDescripcion}
-	El plebiscito es la consulta  directa a todos los estudiantes sobre materias especificas y que tiene carácter vinculante al interior del CAM.
+\subsection{Vacancias}\label{vacancias}
+% TODO Rellenar con lo del grupo de la Angela
+\begin{art}\label{vacanciasDirectiva}
+    En caso de renuncia de toda la Directiva, ésta se tendrá que hacer cargo de un nuevo período eleccionario. En caso de que la renuncia del CAM sea el primer semestre, la Directiva entrante terminará el período en curso, en caso contrario, la Directiva entrante asume el periodo del saliente más un período completo.
 \end{art}
 
-\begin{art}\label{plebiscitoAntelacion}
-	La convocatoria a plebiscito debe ser precisa con alternativas claras e informadas, presentadas con al menos cinco días hábiles de antelación al plebiscito.
+% \begin{art}\label{vacanciasPresidente}
+
+% \end{art}
+
+% \begin{art}\label{vacanciasVicepresidenteInterno}
+
+% \end{art}
+
+% \begin{art}\label{vacanciasVicepresidenteExterno}
+
+% \end{art}
+
+% \begin{art}\label{vacanciasSecretario}
+
+% \end{art}
+
+% \begin{art}\label{vacanciasTesorero}
+
+% \end{art}
+
+% \begin{art}\label{vacanciasConsejeria}
+
+% \end{art}
+
+% \begin{art}\label{vacanciasConsejoDelegados}
+
+% \end{art}
+
+
+\section{De las Votaciones}\label{votaciones}
+% TODO Rellenar con los mínimos para toda votación
+% Agregar la posibilidad de votaciones online bajo varias restricciones: \/
+% TODO Revisar el estatuto de ciencia política
+% TODO Agregar consulta publica
+% Posible articulo: Van a haber votaciones vinculantes y no vinculantes, estás últimas son consultas publicas.
+
+\section{Del Plebiscito}\label{plebiscito}
+
+\begin{art}\label{plebiscitoDescripcion}
+	El plebiscito es la consulta directa a todos los estudiantes, realizada mediante una votación, sobre materias especificas y que tiene carácter vinculante al interior del CAM.
 \end{art}
 
 \begin{art}\label{plebiscitoConvocar}
-	Pueden convocar a Plebiscito:
-	\begin{enumerate}
-		\item La Directiva del CAM por unanimidad.
-		\item La Asamblea General con mayoría absoluta de sus votos.
-		\item El Consejo Estudiantil con mayoría absoluta de sus votos. % TODO check if vote system is compatible with other stuff
-	\end{enumerate}
+    Pueden convocar a Plebiscito:
+    \begin{enumerate}
+        \item La Directiva del CAM por unanimidad.
+        \item La Asamblea General con mayoría absoluta de sus votos.
+        \item El Consejo Estudiantil con mayoría absoluta de sus votos. % TODO check if vote system is compatible with other stuff
+    \end{enumerate}
+\end{art}
+
+\begin{art}\label{plebiscitoDocumento}
+    En caso de que la Asamblea General convoque un plebiscito, se creará una comisión la cual estará encargada de crear un documento con las alternativas de forma clara, precisa y completa. En caso de que un organismo del CAM convoque un plebiscito, este tomará el lugar de la comisión.
+\end{art}
+
+\begin{art}\label{plebiscitoAntelacion}
+	La convocatoria a plebiscito, junto al documento con las alternativas, deberá ser presentada con al menos cinco días hábiles de antelación al plebiscito.
 \end{art}
 
 \begin{art}\label{plebiscitoValidez}
-	Para que el plebiscito sea válido, deberá sufragar el 40\% de los estudiantes representados.
-	% TODO check for other conditions that may be needed or changed.
-	% ? Should we add something in case its not valid? A new date, or something?
+    Para que el plebiscito sea válido, deberá sufragar el 40\% de los estudiantes representados.
+    % ? Tal vez dejarlo en 60%
 \end{art}
 
 \begin{art}\label{}
-	Resultará ganadora aquella alternativa que logre obtener la mayoría simple de los votos válidamente emitidos. % ? Should we move this to the section about votes? Or should we reference it?
+    En caso de que el plebiscito no sea válido, este no tendrá carácter vinculante.
+\end{art}
+
+\begin{art}\label{}
+	Resultará ganadora aquella alternativa que logre obtener la mayoría simple de los votos válidamente emitidos.
 \end{art}
 
 \begin{art}\label{}
@@ -477,7 +525,7 @@
 
 % ? Considerar convenciones en la documentación y los cambios de los estatutos, además de la creación de una organización y un repositorio correspondiente en GitHub o algún servicio equivalente, para facilitar las futuras reformas y la documentación de los cambios.
 \begin{art}\label{}
-	Se deberá mantener un historial de cambios y propuestas, tanto aprobadas como rechazadas, de los estatutos en la plataforma GitHub (). La administración de este historial será responsabilidad del Secretario General, el cual deberá usar el sistema de “pull requests” y “branches” para mantener de manera ordenada los cambios realizados y propuestos, detallándolos de la mejor manera posible.
+	Se deberá mantener un historial de cambios y propuestas, tanto aprobadas como rechazadas, de los estatutos en la plataforma GitHub (). La administración de este historial será responsabilidad del Secretario General o de un estudiante que es aprobado por el Consejo Estudiantil, el cual deberá usar el sistema de “pull requests” y “branches” para mantener de manera ordenada los cambios realizados y propuestos, detallándolos de la mejor manera posible.
 \end{art}
 
 \begin{art}\label{}
