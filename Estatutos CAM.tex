@@ -12,6 +12,7 @@
 \usepackage{amsthm}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
+\usepackage{enumitem}
 
 \definecolor{blue(pigment)}{rgb}{0.2,0.2,0.6}
 
@@ -291,10 +292,11 @@
 \begin{art}\label{funcionesConsejoEstudiantil}
     Son funciones  y atribuciones del Consejo Estudiantil:
     \begin{enumerate}
-        \item Elegir un director de Consejo y un secretario dentro de los integrantes que conformen dicho Consejo. % TODO revisar si es que se debería definir que hace el director y el secretario
+        \item Elegir un director de Consejo entre los integrantes que conformen dicho Consejo, quien moderará el Consejo.
+        \item Elegir un secretario entre los integrantes que conformen dicho Consejo, quien llevará actas del Consejo para su posterior registro. Las actas quedarán a libre disposición del estudiantado.
         \item Velar por el buen trabajo del CAM.
         \item Proponer y votar sobre proyectos que el CAM proponga.
-        \item En caso de que el Consejo lo estime necesario, destituir a cualquier miembro de un organismo directivo del CAM. Esto se regirá según lo descrito en el artículo \ref{perdidaCargosCAM} y el artículo \ref{destitucionesConsejo} en la sección \ref{vacancias}
+        \item En caso de que el Consejo lo estime necesario, destituir a cualquier miembro de un organismo directivo del CAM. Esto se regirá según lo descrito en el artículo \ref{perdidaCargosCAM} y el artículo \ref{destitucionesConsejo} en la sección \ref{vacancias}.
     \end{enumerate}
 \end{art}
 
@@ -303,15 +305,15 @@
     Las Asambleas tienen carácter informativo y/o consultivo, pudiendo transformarse en resolutivas si es aprobado por la mayoría simple de los presentes en la Asamblea. En el caso de que estas sean resolutivas, deberán contar con una asistencia mínima del 35\% de los estudiantes representados. Hay dos tipos de Asambleas:
     \begin{enumerate}
         \item Asamblea Ordinaria: Realizar al menos dos cada semestre, la cual deberá ser citada con al menos dos días hábiles de anticipación.
-        \item Asamblea Extraordinaria: Convocada por la Directiva, o por un grupo de mínimo 7 estudiantes representados que previamente haya entregado sus firmas al CAM. Esta deberá ser citada con al menos tres días hábiles de anticipación.% ? TODO Check if okay
+        \item Asamblea Extraordinaria: Convocada por la Directiva, o por un grupo de mínimo 7 estudiantes representados que previamente haya entregado sus firmas al CAM. Esta deberá ser citada con al menos tres días hábiles de anticipación.
     \end{enumerate}
 \end{art}
 
 \begin{art}\label{consejos}
     Los Consejos Estudiantiles son de dos tipos, un Consejo Ordinario y Consejo Extraordinario. Cuando estás sean convocadas y no este presente el Director o el Secretario del Consejo se designará a un Director o un Secretario interino, según corresponda.
     \begin{enumerate}
-        \item Consejo Ordinario: Es convocada por el director del Consejo como mínimo una vez cada mes, exceptuando los meses de Enero, Febrero y Julio, y con al menos dos días hábiles de anticipación, cualquier decisión resolutiva requiere un mínimo del 50\% de la asistencia.
-        \item Consejo Extraordinario: Puede ser convocado por cualquier miembro del CAM, con al menos 3hrs de anticipación, cualquier decisión resolutiva require un mínimo del 60\% de la asistencia.
+        \item Consejo Ordinario: Es convocada por el director del Consejo como mínimo una vez cada mes, exceptuando los meses de Enero, Febrero y Julio, y con al menos dos días hábiles de anticipación, cualquier decisión resolutiva requiere un mínimo del 50\% de la asistencia del total de los integrantes del Consejo Estudiantil.
+        \item Consejo Extraordinario: Puede ser convocado por cualquier miembro del CAM, con al menos 3hrs de anticipación, cualquier decisión resolutiva require un mínimo del 60\% de la asistencia del total de los integrantes del Consejo Estudiantil.
     \end{enumerate}
 \end{art}
 
@@ -442,11 +444,11 @@
 \subsection{Destituciones}\label{destituciones}
 
 \begin{art}\label{destitucionesConsejo}
-    El Consejo Estudiantil puede destituir miembros del CAM, con excepción del Consejero Territorial, si es que este así lo decide por una votación interna.
+    El Consejo Estudiantil puede destituir miembros del CAM, con excepción del Consejero Territorial, si es que este así lo decide por una votación interna no secreta. Esto será comunicado por todos los medios oficiales del CAM, e incluirá las razones de está destitución y la fecha de la misma.
 \end{art}
 
 \begin{art}\label{destitucionesAsamblea}
-    En una Asamblea General se puede proponer la moción de destituir a algún representante del CAM, está moción se tiene que aprobar bajo lo establecido en la sección \ref{votaciones}.
+    En una Asamblea General se puede proponer la moción de destituir a algún representante del CAM, esta moción se tiene que aprobar bajo lo establecido en la sección \ref{votacionesGeneral}.
 \end{art}
 
 
@@ -457,36 +459,42 @@
 \end{art}
 
 \begin{art}\label{renunciasDirectivaMiembro}
-    Al renunciar un integrante de la directiva, esta tiene la facultad de proponer un posible reemplazante, el cual tendrá que ser aprobado por el Consejo Estudiantil.
+    Al renunciar un integrante de la Directiva, esta tiene la facultad de proponer un posible reemplazante, el cual tendrá que ser aprobado por el Consejo Estudiantil.
 \end{art}
 
 \begin{art}\label{vacanciasDirectivaMiembro}
     En caso de que un integrante de la directiva no proponga un reemplazante, o que el reemplazo no sea aprobado, este puesto será reemplazado de la siguiente forma:
     \begin{enumerate}
         \item Si el cargo es ejecutivo (i.e. Presidente, Vice-Presidente Interno, Vice-Presidente Externo) este será reemplazado por el siguiente cargo ejecutivo en la línea de sucesión, la cual por defecto será, en orden, Presidente, Vice-Presidente Interno y por último Vice-Presidente Externo.
-        \item Si el cargo es administrativo (i.e. Tesorero, Secretario) este será reemplazado por el siguiente cargo administrativo en la línea de sucesión, la cual por defecto será, en orden, Secretario y por último Tesorero.
-        \item En caso de que el último cargo de alguna de las líneas de sucesión queda vacío, se propone un miembro del Consejo Ejecutivo, si el Consejo Ejecutivo no tiene miembros se propone un miembro del Consejo Estudiantil, en ambos casos este tiene que ser aprobado por el Consejo Estudiantil bajo una votación de mayoría simple.
+        \item Si el cargo es administrativo (i.e. Secretario, Tesorero) este será reemplazado por el siguiente cargo administrativo en la línea de sucesión, la cual por defecto será, en orden, Secretario y por último Tesorero.
+        \item En caso de que el último cargo de alguna de las líneas de sucesión quede vacío se sigue en orden alfabético los puntos descritos a continuación. Además, en todos los casos debe ser aprobado por el Consejo Estudiantil con una votación de mayoría simple:
+        \begin{enumerate}[label=(\alph*)]
+            \item La Directiva puede proponer un miembro del Consejo Ejecutivo.
+            \item La Directiva puede proponer un miembro del Consejo Estudiantil.
+            \item El Consejo Estudiantil puede proponer un miembro del Consejo Ejecutivo.
+            \item El Consejo Estudiantil puede proponer un miembro del Consejo Estudiantil.
+        \end{enumerate}
     \end{enumerate}
 \end{art}
 
 \begin{art}\label{vacanciasDirectivaPlazos}
-    En caso de quedar vacante la posición de un integrante de la directiva, el integrante en cuestión tiene que dar su renuncia con una semana de anticipación, excepto en el caso de la tesorería donde esta necesitará un plazo de 3 semanas de anticipación.
+    En caso de quedar vacante la posición de un integrante de la directiva, el integrante en cuestión tiene que dar su renuncia con una semana de anticipación, excepto en el caso de la tesorería donde esta necesitará un plazo extra de 2 semanas, para facilitar el proceso de cambio administrativo.
 \end{art}
 
 \begin{art}\label{vacanciasDirectivaCompleta}
     En caso de quedar vacante la posición de toda la directiva asumirá el Consejo Estudiantil en forma de una directiva interina, y se llamará a elecciones inmediatamente después de la renuncia. En caso de que la renuncia sea el primer semestre, la Directiva electa terminará el período en curso, en caso contrario, la Directiva electa asume el periodo en curso y un además un período completo.
 \end{art}
 
+\begin{art}\label{vacanciasConsejero}
+    En caso de quedar vacante la posición del consejero académico, el cargo lo toma el subconsejero académico, y en caso de la ausencia de éste, lo toma el vicepresidente interno, quedando con ambos cargos.
+\end{art}
+
 \begin{art}\label{vacanciasConsejoDelegados}
-    En caso de quedar vacante la posición de un integrante del Consejo de Delegados, se llamará a elecciones abiertas bajo las mismas reglas expuestas en el artículo de votaciones de Consejo de Delegados, con la excepción de que si no hay candidato entonces el Consejo Estudiantil designará por votación interna a un miembro del Consejo Estudiantil que tome este cargo y luego hacer una votación aprobatoria según lo establecido en el artículo \ref{votacionesDelegados}. En caso de que el candidato no sea aprobado, o que no se haya llegado a un acuerdo en el Consejo Estudiantil, el puesto queda vacío.
+    En caso de quedar vacante la posición de un integrante del Consejo de Delegados, se llamará a elecciones abiertas bajo las mismas reglas expuestas en el artículo \ref{votacionesDelegados}, con la excepción de que si no hay candidato entonces el Consejo Estudiantil designará por votación interna a un miembro del Consejo Estudiantil que tome este cargo y luego hacer una votación aprobatoria según lo establecido en el artículo \ref{votacionesDelegados}. En caso de que el candidato no sea aprobado, o que no se haya llegado a un acuerdo en el Consejo Estudiantil, el puesto queda vacío.
 \end{art}
 
 \begin{art}\label{vacanciasConsejoEstudiantil}
-    En caso de quedar vacante la posición del presidente, o el secretario, del Consejo Estudiantil se volverán a elegir estos cargos después de finalizar el proceso del artículo anterior.
-\end{art}
-
-\begin{art}\label{vacanciasConsejero}
-    En caso de quedar vacante la posición del consejero académico, el cargo lo toma el subconsejero académico, y en caso de la ausencia de éste, lo toma el vicepresidente interno, quedando con ambos cargos.
+    En caso de quedar vacante la posición del presidente, o el secretario, del Consejo Estudiantil se volverán a elegir estos cargos después de finalizar los procesos de los artículos \ref{renunciasDirectivaMiembro}, \ref{vacanciasDirectivaMiembro}, \ref{vacanciasDirectivaCompleta}, \ref{vacanciasConsejero} y \ref{vacanciasConsejoDelegados}.
 \end{art}
 
 \section{Votaciones}\label{votaciones}
@@ -502,7 +510,7 @@
 \end{art}
 
 \begin{art}\label{}
-    Toda votación tiene duración, la cual por defecto serán 2 días hábiles.
+    Toda votación tiene duración, la cual por defecto será 2 días hábiles.
 \end{art}
 
 \begin{art}\label{}
@@ -530,13 +538,13 @@
 \subsection{Votaciones Consejería Académica}
 
 \begin{art}\label{}
-    Para la votación para la elección de la Consejería Académica se tienen dos universos de votantes separados, compuestos por estudiantes representados de la carrera de Matemáticas y de la carrera de Estadística correspondientemente, para cada universo de votantes se harán votaciones, las cuales serán llevadas a cabo en paralelo.
+    En la votación para la elección de la Consejería Académica se tienen dos universos de votantes separados, compuestos por estudiantes representados de la carrera de Matemáticas y de la carrera de Estadística correspondientemente. Para cada universo de votantes se harán votaciones, las cuales serán llevadas a cabo en paralelo.
 \end{art}
 
 \subsection{Votaciones Delegados}\label{votacionesDelegados}
 
 \begin{art}\label{}
-    Para la votación para la elección de Delegados cada generación (ver artículo 6, ii) es un universo de votantes distinto y separado, y para cada universo de votantes se harán votaciones, las cuales serán llevadas a cabo en paralelo.
+    En la votación para la elección de Delegados cada generación, Postgrado y los estudiantes representados no considerados en los grupos anteriores (ver artículo \ref{definicionesOrganismos}, iii) son universos de votantes distintos y separados, por ende para cada universo de votantes se harán votaciones, las cuales serán llevadas a cabo en paralelo.
 \end{art}
 
 \begin{art}\label{}
@@ -590,7 +598,7 @@
 \end{art}
 
 \begin{art}\label{}
-    Como organismo independiente estas pueden conseguir financiamiento propio y/o solicitar apoyo financiero formalmente a la Directiva, llámese, tiene  que haber una postulación escrita con un proyecto asociado, la cantidad de apoyo necesario y las formas en las que se usará este apoyo, y las firmas de todos los integrantes, el apoyo solicitado tiene que ser aprobado por el Consejo Estudiantil y la Directiva.
+    Como organismo independiente, estas pueden conseguir financiamiento propio y/o solicitar apoyo financiero formalmente a la Directiva, llámese, tiene  que haber una postulación escrita con un proyecto asociado; la cantidad de apoyo necesario y las formas en las que se usará este apoyo; y las firmas de todos los integrantes. El apoyo solicitado tiene que ser aprobado por el Consejo Estudiantil y la Directiva.
 \end{art}
 
 
@@ -605,16 +613,15 @@
     \end{enumerate}
 \end{art}
 
-
-\begin{art}\label{estatutosReformaAprobacion}
-    Toda propuesta deberá ser presentada a la Directiva y al Consejo Estudiantil, los cuales la difundirán, luego esta se llevará a votación siguiendo lo detallado en la sección \ref{votaciones}.
-\end{art}
-
 \begin{art}\label{}
     En caso de que la Asamblea General proponga una reforma y esta sea aprobada en una votación en la misma Asamblea por mayoría absoluta, la propuesta no necesitará pasar por el proceso del artículo \ref{estatutosReformaAprobacion}.
 \end{art}
 
-% ? Considerar convenciones en la documentación y los cambios de los estatutos para facilitar las futuras reformas y la documentación de los cambios.
+\begin{art}\label{estatutosReformaAprobacion}
+    Toda propuesta deberá ser presentada a la Directiva y al Consejo Estudiantil, los cuales la difundirán. Luego, esta se llevará a votación siguiendo lo detallado en la sección \ref{votaciones}.
+\end{art}
+
+% TODO Considerar convenciones en la documentación y los cambios de los estatutos para facilitar las futuras reformas y la documentación de los cambios.
 \begin{art}\label{}
     Se deberá mantener un historial de cambios y propuestas, tanto aprobadas como rechazadas, de los estatutos en la plataforma GitHub (\url{https://github.com/CAM-UC/Estatutos}). La administración de este historial será responsabilidad del Secretario General, o de un estudiante aprobado por el Consejo Estudiantil, el cual deberá usar el sistema de “pull requests” y “branches” para mantener de manera ordenada los cambios realizados y propuestos, detallándolos de la mejor manera posible.
 \end{art}
@@ -627,10 +634,10 @@
 % * Todo equipo correspondiente a una reforma deberá añadirse abajo incluyendo la información pertinente (e.g. mes, año, miembros del equipo en cuestión)
 
 \newpage
-\textsc{Elaborados por el Comité sobre la reforma de los estatutos}\\
+\textsc{Elaborados por el Comité de la reforma de los estatutos}\\
 Facultad de Matemáticas, Pontificia Universidad Católica de Chile\\
-Santiago, Marzo de 2020
+Santiago, Mayo de 2020
 \begin{sloppypar}
-    \textsc{Comité sobre la reforma de los estatutos:} Nicholas Mc-Donnell, Elías Alvear, Sebastián Avendaño, Romina Mercado, Javier Diaz, María Catalina Cárdenas, Juan Pablo Vega, Matías Bruna, Ángela Flores, Javier Reyes, José Antonio Montenegro, Paulina Vega, Thyare Parra, Felipe Guzmán, Guillermo Cerda, Cristobal Villalobos
+    \textsc{Comité sobre la reforma de los estatutos:} Nicholas Mc-Donnell, Sebastián Avendaño, Romina Mercado, Javier Diaz, María Catalina Cárdenas, Juan Pablo Vega, Matías Bruna, Ángela Flores, Javier Reyes, Paulina Vega, Elías Alvear, José Antonio Montenegro, Thyare Parra, Felipe Guzmán, Zoe Cano, Guillermo Cerda, Cristobal Villalobos
 \end{sloppypar}
 \end{document}
