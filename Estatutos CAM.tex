@@ -42,9 +42,9 @@
 
 % Article Environment
 \newcounter{art}
-\newenvironment{art}{
-    Art.\refstepcounter{art} \theart\:
-}{}
+\newenvironment{art}{\textbf{
+    Art.\refstepcounter{art} \theart .
+}}{}
 
 %\titleformat{\section}[display]{\scshape \Large}{Título \thesection:}{}{}[]
 
@@ -604,23 +604,51 @@
 
 
 \section{De los Estatutos}\label{estatutos}% ? Mover, agregar y/o reescribir cosas de la sección
-% TODO Rehacer la parte de la presente sección, bajo lo mencionado por el grupo de Matías Bruna. Ver las propuestas que se generen el viernes 22 de Mayo.
-\begin{art}\label{}
-    Podrán proponer reformas a los presentes estatutos:
-    \begin{enumerate}
-        \item La Asamblea General con mayoría absoluta.
-        \item El Consejo Estudiantil.
-        \item Cualquier miembro de la Directiva.
-    \end{enumerate}
+% TODO Rehacer la parte de la presente sección, bajo lo mencionado por el grupo de Matías Bruna. Ver las propuestas que se generen el viernes 22 de Mayo
+
+\begin{art}\label{tiporeformas}
+	Existen dos tipos de propuestas a reforma:
+	\begin{enumerate}
+		\item Propuesta de cambio gramatical.
+		\item Propuesta de cambio estructural.
+	\end{enumerate}
 \end{art}
 
+\begin{art}\label{cambiogramatical}
+	Todo cambio gramatical debe ser discutido y aprobado en el Consejo Estudiantil.
+\end{art}
+
+
 \begin{art}\label{}
-    En caso de que la Asamblea General proponga una reforma y esta sea aprobada en una votación en la misma Asamblea por mayoría absoluta, la propuesta no necesitará pasar por el proceso del artículo \ref{estatutosReformaAprobacion}.
+	Podrán llamar a cambio estructural de los presentes estatutos:
+	\begin{enumerate}
+		\item La Asamblea General, con mayoria simple.
+		\item El Consejo Estudiantil, con dos tercios de los votos.
+		\item Miembros de la Directiva, por unanimidad.
+	\end{enumerate}
+\end{art}
+
+\begin{art}
+Este llamado a cambio debe ser presentado en la Asamblea General, acompañado de argumentación que justifique la solicitud. Junto a esto, se debe hacer un llamado abierto, por todos los medios oficiales del CAM, para conformar una comisión. Esta realizará una propuesta de reforma a los presentes estatutos, la cual debe seguir los lineamientos del llamado a cambio antes mencionado.
 \end{art}
 
 \begin{art}\label{estatutosReformaAprobacion}
-    Toda propuesta deberá ser presentada a la Directiva y al Consejo Estudiantil, los cuales la difundirán. Luego, esta se llevará a votación siguiendo lo detallado en la sección \ref{votaciones}.
+    Una vez la comisión antes mencionada tenga lista una propuesta a reforma, esta se deberá  presentar por escrito a la Asamblea General, explicando los cambios que se proponen, junto con su argumentación respectiva. Posteriormente, esta se llevará a votación siguiendo lo detallado en la sección \ref{votaciones}.
 \end{art}
+
+\begin{art}\label{vigenciareformas}
+Toda reforma aprobada entrará en vigencia una vez publicada.
+\end{art}
+
+\begin{art}\label{articulostransitorios}
+Si una reforma genera una incompatibilidad con los estatutos vigentes, esta deberá contener artículos transitorios que establezcan soluciones a estas incompatibilidades. La vigencia de estos no puede extenderse más de un año de su publicación y, terminado este plazo, automáticamente son eliminados de los estatutos vigentes.
+\end{art}
+
+
+\begin{art}\label{publicaciónreformas}
+	El Secretario General tendrá la responsabilidad de publicar los cambios respectivos a más tardar tres días hábiles una vez aprobada la reforma.
+\end{art}
+
 
 % TODO Considerar convenciones en la documentación y los cambios de los estatutos para facilitar las futuras reformas y la documentación de los cambios.
 \begin{art}\label{}
@@ -628,17 +656,17 @@
 \end{art}
 
 \begin{art}\label{}
-    En caso de existir cualquier duda sobre la interpretación del presente estatuto la Asamblea General será quien deba decidir dicha interpretación.
+    En caso de existir cualquier duda sobre la interpretación del presente estatuto, el Consejo Estudiantil deberá presentar una interpretación. Esta será discutida y podrá ser modificada en la Asamblea General, para posteriormente ser sometida a votación en la misma Asamblea.
 \end{art}
 
 % * La siguiente parte corresponde a la documentación de futuras y la presente reforma.
 % * Todo equipo correspondiente a una reforma deberá añadirse abajo incluyendo la información pertinente (e.g. mes, año, miembros del equipo en cuestión)
 
 \newpage
-\textsc{Elaborados por el Comité de la reforma de los estatutos}\\
+\textsc{Elaborado por Comisión de reforma de estatutos:}
+Elías Alvear, Sebastián Avendaño, Matías Bruna, María Catalina Cárdenas, Ángela Flores, Nicholas Mc-Donnell, Romina Mercado, José Antonio Montenegro, Javier Reyes, Juan Pablo Vega y Paulina Vega.
+\begin{sloppypar}
 Facultad de Matemáticas, Pontificia Universidad Católica de Chile\\
 Santiago, Mayo de 2020
-\begin{sloppypar}
-    \textsc{Comité sobre la reforma de los estatutos:} Nicholas Mc-Donnell, Sebastián Avendaño, Romina Mercado, Javier Diaz, María Catalina Cárdenas, Juan Pablo Vega, Matías Bruna, Ángela Flores, Javier Reyes, Paulina Vega, Elías Alvear, José Antonio Montenegro, Thyare Parra, Felipe Guzmán, Zoe Cano, Guillermo Cerda, Cristobal Villalobos
 \end{sloppypar}
 \end{document}
