@@ -1,6 +1,6 @@
 \documentclass[letterpaper,11pt]{article}
 % Packages
-\usepackage[spanish]{babel}
+\usepackage[spanish, es-lcroman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage[margin=1in]{geometry}
@@ -8,11 +8,10 @@
 \usepackage{lmodern}
 \usepackage{textcomp}
 \usepackage{hyperref}
-\usepackage{amsmath}
-\usepackage{amsthm}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{enumitem}
+\usepackage{tocloft}
 
 \definecolor{blue(pigment)}{rgb}{0.2,0.2,0.6}
 
@@ -39,14 +38,13 @@
 \renewcommand{\headrulewidth}{1 pt}
 \renewcommand{\footrulewidth}{0 pt}
 \headheight=75pt
+\setlength{\cftbeforesecskip}{12pt}
+\setlength{\cftbeforesubsecskip}{8pt}
+\cftsetindents{section}{0em}{1.75em}
 
 % Article Environment
 \newcounter{art}
-\newenvironment{art}{\textbf{
-    Art.\refstepcounter{art} \theart .
-}}{}
-
-%\titleformat{\section}[display]{\scshape \Large}{Título \thesection:}{}{}[]
+\newenvironment{art}{\refstepcounter{art}\textbf{Art.{\space}\theart.}}{}
 
 % Enumeraciones
 \renewcommand{\theenumi}{\roman{enumi}}
@@ -57,8 +55,8 @@
 \renewcommand{\labelenumiii}{\theenumiii.}
 \renewcommand{\theenumiv}{(\alph{enumiv})}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-\newcommand{\aref}[1]{\hyperref[#1]{\ref*{#1}}}
-\newcommand{\aaref}[2]{\hyperref[#2]{\ref*{#1}, letra \ref*{#2}}}
+%\newcommand{\aref}[1]{\hyperref[#1]{\ref*{#1}}}
+%\newcommand{\aaref}[2]{\hyperref[#2]{\ref*{#1}, letra \ref*{#2}}}
 \makeatletter \renewcommand\p@enumii{\theenumi, } \makeatother
 \makeatletter \renewcommand\p@enumiii{\theenumii, } \makeatother
 \makeatletter \renewcommand\p@enumiv{\theenumiii, } \makeatother
