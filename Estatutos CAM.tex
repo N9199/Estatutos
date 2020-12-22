@@ -46,9 +46,9 @@
 
 % Ambientes de Artículos
 \newcounter{art}
-\newenvironment{art}{\refstepcounter{art}\textbf{Art.{\space}\theart.}}{}
+\newenvironment{art}{\refstepcounter{art}\mbox{\textbf{Art.{\space}\theart.}}\ignorespaces}{}
 \newcounter{artt}
-\newenvironment{artt}{\refstepcounter{artt}\textbf{\Ordinalstring{artt}[f].}}{} % TODO Check spacing?
+\newenvironment{artt}{\refstepcounter{artt}{\bf\Ordinalstring{artt}[f].}}{} % TODO Check spacing?
 % Enumeraciones
 \renewcommand{\theenumi}{\roman{enumi}}
 \renewcommand{\labelenumi}{\theenumi.}
@@ -92,20 +92,19 @@
 \pagenumbering{arabic}
 
 \section{Declaración de Principios}\label{principios}
-``Nosotros, la comunidad de estudiantes de matemática y estadística ratificamos nuestro compromiso con la defensa de los derechos e intereses de todos los estudiantes de la Facultad de Matemáticas, siendo rasgos fundamentales del centro de alumnos de matemáticas su naturaleza participativa, pluralista y el respeto a las decisiones de las mayorías. Junto con esto, manifestamos nuestro respeto a los valores católicos.''
+``Nosotros, la comunidad de estudiantes de la Facultad de Matemáticas ratificamos nuestro compromiso con la defensa de los derechos e intereses de todos los estudiantes de la Facultad de Matemáticas, siendo rasgos fundamentales del centro de alumnos de matemáticas su naturaleza participativa, pluralista y el respeto a las decisiones de las mayorías. Junto con esto, manifestamos nuestro respeto a los valores católicos.''
 
 \section{Normas Generales}\label{normasGenerales}
 \begin{art}\label{}
-    Se establecen como normas estatutarias del Centro de Alumnos de Matemáticas (CAM) las contenidas en los presentes estatutos.
+    Se establecen como normas estatutarias del Centro de Alumnos de Matemáticas (desde ahora ``CAM'') las contenidas en los presentes estatutos.
 \end{art}
 
 \begin{art}\label{estudiantesRepresentados}
-    El CAM es el organismo que representa ante la comunidad universitaria de la Pontificia Universidad Católica de Chile (UC), dentro de su ámbito de competencia, a:
+    El CAM es el organismo que representa ante la comunidad universitaria de la Pontificia Universidad Católica de Chile (UC), dentro de su ámbito de competencia, a los ``estudiantes representados'', quienes están descritos a continuación:
     \begin{enumerate}
         \item Estudiantes de pregrado regulares de la Facultad de Matemáticas (desde ahora ``la Facultad'').
-        \item Estudiantes de postgrado regulares de la Facultad que manifiesten su deseo de ser representados ante el TRICEL.
+        \item Estudiantes de postgrado regulares de la Facultad que manifiesten su deseo de ser representados ante el TRICEL\footnote{Como se define en la sección \ref{TRICEL}}.
     \end{enumerate}
-    Llamaremos ``estudiantes representados'' al conjunto descrito por los puntos anteriores.
 \end{art}
 
 \begin{art}\label{finalidadesCAM}
@@ -118,39 +117,39 @@
     \end{enumerate}
 \end{art}
 
-\begin{art}\label{normasGenerales}
+\begin{art}\label{organismosDirectivos}
     Los organismos directivos del CAM son los siguientes:
     \begin{enumerate}
-        \item Directiva: Está conformada por cinco miembros. En orden jerárquico:
+        \item Directiva: Está conformada por cinco cargos. En orden jerárquico:
               \begin{enumerate}
-                  \item Presidente
-                  \item Vicepresidente Interno
-                  \item Vicepresidente Externo
-                  \item Secretario General
-                  \item Tesorero
+                  \item Presidencia.
+                  \item Vicepresidencia Interna.
+                  \item Vicepresidencia Externa.
+                  \item Secretaría General.
+                  \item Tesorería.
               \end{enumerate}
-        \item Consejo Ejecutivo: Está conformado por miembros designados por el Presidente de la Directiva según lo que estime conveniente, especificando su labor, previa aprobación individual del Consejo Estudiantil.
-        \item Consejo de Delegados: Se conformará por los delegados de cada generación de cada carrera, un delegado de Postgrado y un delegado correspondiente a todos los estudiantes no considerados en los grupos anteriores independiente de su carrera. Hay cinco generaciones de Estadística y cuatro de Matemáticas, se dividen como se ve en la tabla.
-              \begin{center}
-                  \begin{tabular}{|c|c|c|}
+        \item Consejo Ejecutivo: Está conformado por miembros designados por quien ocupre el cargo de la Presidencia según lo que estime conveniente, especificando su labor, previa aprobación individual del Consejo Estudiantil.
+        \item Consejo de Delegados: Se conformará por los delegados de cada generación de cada carrera, un delegado de Postgrado y un delegado correspondiente a todos los estudiantes no considerados en los grupos anteriores independiente de su carrera. Hay cinco generaciones de Estadística, cuatro de Matemáticas y cuatro de Ciencias de Datos, se dividen como se ve en la tabla.
+              \begin{figure*}[h]
+                  \begin{tabular}{|c|c|c|c|}
                       \hline
-                      Año ingreso   & Generación Matemáticas & Generación Estadística \\
+                      Año ingreso & Generación Matemáticas & Generación Ciencias de Datos & Generación Estadística\\
                       \hline
-                      Año actual    & Generación 1           & Generación 1           \\
-                      Año actual -1 & Generación 2           & Generación 2           \\
-                      Año actual -2 & Generación 3           & Generación 3           \\
-                      Año actual -3 & Generación 4           & Generación 4           \\
-                      Año actual -4 &                        & Generación 5           \\
+                      Año actual  & Generación 1           & Generación 1           & Generación 1\\
+                      Año actual -1 & Generación 2           & Generación 2           & Generación 2\\
+                      Año actual -2 & Generación 3           & Generación 3           & Generación 3\\
+                      Año actual -3 & Generación 4           & Generación 4           & Generación 4\\
+                      Año actual -4 & & & Generación 5 \\
                       \hline
                   \end{tabular}
-              \end{center}
-        \item Consejerías Académicas: Hay dos consejerías académicas, cada una corresponde a una carrera de pregrado, conformada respectivamente por un Consejero y además por un Subconsejero si así el Consejero lo desea.
+              \end{figure*}
+        \item Consejerías Académicas: Hay tres consejerías académicas, cada una corresponde a una carrera de pregrado, conformada respectivamente por un Consejero y además por un Subconsejero si así el Consejero lo desea.
         \item Consejo Estudiantil: Está conformado por el Consejo de Delegados, las Consejerías Académicas, el Consejero Territorial y dos miembros de la Directiva. Los Consejos que se convoquen serán abiertos y podrá participar con derecho a voz todo estudiante representado que así lo desee.
     \end{enumerate}
 \end{art}
 
-\begin{art}\label{}
-    El Tribunal Calificador de Elecciones (TRICEL) es un organismo no directivo del CAM. Está conformado como se describe en la sección \ref{TRICEL}.
+\begin{art}\label{organismosNoDirectivos}
+    El Tribunal Calificador de Elecciones\footnote{Como se define en la sección \ref{TRICEL}.} (TRICEL) es un organismo no directivo del CAM.
 \end{art}
 
 \begin{art}\label{}
@@ -161,9 +160,9 @@
     Si un estudiante representado está cursando más de una carrera, y una de ellas no pertenece a la Facultad, se verá obligado a informar a los centros de estudiantes correspondientes y al TRICEL bajo que carrera votará en votaciones que conciernan a la FEUC.
 \end{art}
 
-\section{De las Atribuciones y Deberes}\label{funcionesAtribuciones}
+\section{De las Atribuciones, Derechos y Deberes}\label{atribucionesDerechosDeberes}
 
-\begin{art}\label{atribucionesEstudiantes}
+\begin{art}\label{derechosEstudiantes}
     Son derechos de los estudiantes representados:
     \begin{enumerate}
         \item Manifestar libremente su opinión en las Asambleas Generales\footnote{Como se definen en el artículo \ref{asambleas}} y otros espacios destinados por el CAM para tal efecto.
@@ -172,6 +171,7 @@
         \item Exigir información sobre el trabajo del CAM en forma oral o escrita.
         \item Proponer proyectos al CAM.
         \item Solicitar espacios, equipos y/o materiales que sean del CAM para realizar actividades que brinden beneficios a la comunidad universitaria.
+        \item Consultar sobre su situación académica a la Consejería Académica correspondiente.
     \end{enumerate}
 \end{art}
 
@@ -179,7 +179,7 @@
     Son deberes de los miembros de los organismos directivos del CAM:
     \begin{enumerate}
         \item Informar a cada uno de los estudiantes de sus derechos.
-        \item Votar en las elecciones.
+        \item Votar en las elecciones a nivel CAM.
         \item Justificar por escrito inasistencias a las Asambleas Generales. Esta justificación quedará registrada en el acta de la Asamblea correspondiente.
         \item Respetar la opinión y los espacios de democracia que se generen.
         \item Velar por el cumplimiento de los estatutos.
@@ -189,81 +189,81 @@
 \begin{art}\label{deberesDirectiva}
     Son deberes de la Directiva:
     \begin{enumerate}
-        \item Desarrollar el plan de trabajo presentado.
-        \item Convocar a las Asambleas Ordinarias a las que hace referencia la sección \ref{asambleasConsejos}. %1
-        \item Crear y promover el desarrollo de actividades de orden estudiantil y/o de formación general e integral en el estudiantado.%3
-        \item Apoyar a las vocalías\footnote{Como se defininen en la sección \ref{vocalias}}.%4
-        \item Pronunciarse, tras debida solicitud por parte de los estudiantes representados, ante los problemas estudiantiles y sociales, e informar su postura al respecto. %5
-        \item Representar ante autoridades universitarias, organismos superiores y la FEUC, a los estudiantes representados. %6
-        \item Administrar los bienes que estén a disposición del CAM. %7
-        \item Informar a los estudiantes de las actividades realizadas y a realizar de posible interés del estudiantado.%9
-        \item Votar en todas las votaciones de toda Asamblea General en la que este presente. %10
-        \item Asistir con la presencia de al menos uno de sus miembros a los Consejos de Federación, de Facultad y Estudiantil según corresponda.%11
-        \item Tomar decisiones con total acuerdo de la Directiva, o como sus miembros lo estimen conveniente.%13
-        \item Definir los medios oficiales, los cuales deben incluir al correo institucional.
-        \item Todas las demás disposiciones que el presente estatuto estipule.%14
+        \item Desarrollar el plan de trabajo presentado en la medida de lo posible.
+        \item Convocar a las Asambleas Ordinarias a las que hace referencia la sección \ref{asambleasConsejos}.
+        \item Crear y promover el desarrollo de actividades de orden estudiantil y/o de formación general e integral en el estudiantado.
+        \item Apoyar a las vocalías\footnote{Como se defininen en la sección \ref{vocalias}}.
+        \item Pronunciarse, tras debida solicitud por parte de los estudiantes representados, ante los problemas estudiantiles y sociales, e informar su postura al respecto.
+        \item Representar ante autoridades universitarias, organismos superiores y la FEUC, a los estudiantes representados.
+        \item Administrar los bienes que estén a disposición del CAM.
+        \item Informar a los estudiantes de las actividades realizadas y a realizar de posible interés del estudiantado.
+        \item Votar en todas las votaciones de toda Asamblea General en la que este presente.
+        \item Asistir con la presencia de al menos uno de sus miembros a los Consejos de Federación, de Facultad y Estudiantil según corresponda.
+        \item Tomar decisiones con total acuerdo de la Directiva, o como sus miembros lo estimen conveniente.
+        \item Definir los medios oficiales de información, los cuales deben incluir al correo institucional.
+        \item Todas las demás disposiciones que el presente estatuto estipule.
     \end{enumerate}
 \end{art}
 
 \begin{art}\label{atribucionesDirectiva}
     Son atribuciones de la Directiva:
     \begin{enumerate}
-        \item Convocar a sesiones extraordinarias de la Asamblea General\footnote{Como se describe en el artículo \ref{asambleas}}.%8
-        \item Sesionar cuantas veces estime conveniente para cumplir con las funciones que contemple el actual estatuto.%12
+        \item Convocar a sesiones extraordinarias de la Asamblea General\footnote{Como se describe en el artículo \ref{asambleas}}.
+        \item Sesionar cuantas veces estime conveniente para cumplir con las funciones que contemple el actual estatuto.
         \item Pronunciarse, según lo estimen conveniente, ante los problemas estudiantiles y sociales, e informar su postura al respecto.
-        \item Todas las demás disposiciones que el presente estatuto estipule.%14
+        \item Todas las demás disposiciones que el presente estatuto estipule.
     \end{enumerate}
 \end{art}
 
-\begin{art}\label{funcionesPresidente}
-    Son funciones del Presidente:
+\begin{art}\label{funcionesPresidencia}
+    Son funciones de quien esté a cargo de la Presidencia:
     \begin{enumerate}
         \item Representar a la Directiva tanto dentro como fuera de la universidad, de acuerdo a las finalidades del Directiva.
         \item Garantizar la existencia de un vocero de las inquietudes de los estudiantes.
         \item Asegurar el adecuado desempeño de las Asambleas Generales
         \item Presidir reuniones de Directiva.
-        \item Realizar al menos dos cuentas públicas cada semestre, una al principio y otra al final del semestre, donde se deberá entregar una evaluación con los hitos más importantes del semestre, junto con un estado financiero que refleje el gasto de dinero del CAM.
+        \item Realizar cuentas públicas como se describe en el artículo \ref{asambleas}, donde se deberá entregar una evaluación con los hitos más importantes del semestre, junto con un estado financiero que refleje el gasto de dinero del CAM.
         \item Ampliar el número del Consejo Ejecutivo, sus funciones y atribuciones dentro de lo que estime conveniente, con previa aprobación del Consejo Estudiantil.
     \end{enumerate}
 \end{art}
 
-\begin{art}\label{funcionesVicepresidenteInterno}
-    Son funciones del Vicepresidente Interno:
+\begin{art}\label{funcionesVicepresidenciaInterno}
+    Son funciones de quien esté a cargo de la Vicepresidencia Interna:
     \begin{enumerate}
-        \item Apoyar al Presidente en las funciones que este deba cumplir con la comunidad de la Facultad.
-        \item Subrogar al Presidente en su ausencia.
+        \item Apoyar a la Presidencia en las funciones que este deba cumplir con la comunidad de la Facultad.
+        \item Subrogar a quien tenga el cargo de la Presidencia en su ausencia.
         \item Velar por el cumplimiento de las funciones de los distintos miembros de la Directiva y de los miembros del Consejo Estudiantil.
         \item Mediar las relaciones entre la Directiva y las autoridades, profesores y funcionarios de la Facultad. Asimismo, deberá coordinar cualquier trabajo con el Consejo Estudiantil.
         \item Difundir toda la información que la Directiva deba y/o quiera difundir por todos los medios oficiales.
     \end{enumerate}
 \end{art}
 
-\begin{art}\label{funcionesVicepresidenteExterno}
-    Son funciones del Vicepresidente Externo:
+\begin{art}\label{funcionesVicepresidenciaExterno}
+    Son funciones de quien esté a cargo de la Vicepresidencia Externa:
     \begin{enumerate}
-        \item Apoyar al Presidente en las funciones que este deba cumplir con la comunidad universitaria externa a la Facultad.
-        \item Subrogar al Vicepresidente Interno en caso de ausencia de este.
+        \item Apoyar a la Presidencia en las funciones que este deba cumplir con la comunidad universitaria externa a la Facultad.
+        \item Subrogar a quien tenga el cargo de la Vicepresidencia Interna en caso de ausencia de este.
         \item Mediar las relaciones entre la Directiva y las autoridades universitarias, la FEUC, movimientos políticos, las instituciones y los organismos no pertenecientes a la universidad.
+        \item Asistir al Consejo FEUC. En caso de no poder hacerlo, coordinar un reemplazo con la Directiva y el Consejo Ejecutivo.
         \item Informar e invitar al Consejero Territorial a los consejos estudiantiles cuando estos se realicen.
     \end{enumerate}
 \end{art}
 
-\begin{art}\label{funcionesSecretario}
-    Son funciones del Secretario General:
+\begin{art}\label{funcionesSecretaria}
+    Son funciones de quien esté a cargo de la Secretaría General:
     \begin{enumerate}
-        \item Publicar en todos los medios oficiales las citaciones a Asambleas Generales\footnote{Como se definen en artículo \ref{asambleas}}, además de publicar las actas de estas sesiones.
+        \item Publicar en todos los medios oficiales las citaciones a Asambleas Generales\footnote{Como se definen en artículo \ref{asambleas}}, y después publicar las actas por los mismos medios.
         \item Mantener el inventario al día y tenerlo a disposición de la Directiva cuando esta lo estime conveniente.
         \item A comienzos de año dar a conocer los estatutos que rigen al CAM, publicándolos en todos los medios oficiales.
         \item Recibir proyectos de reforma a los estatutos\footnote{Ver sección \ref{estatutos}}.
         \item Tomar acta de las Asambleas y reuniones de Directiva tanto ordinarias como extraordinarias.
-        \item Publicar las actas de asambleas en todos los medios oficiales.
     \end{enumerate}
 \end{art}
 
-\begin{art}\label{funcionesTesorero}
-    Son funciones del Tesorero:
+\begin{art}\label{funcionesTesoreria}
+    Son funciones de quien esté a cargo de la Tesorería:
     \begin{enumerate}
-        \item Llevar la contabilidad del CAM, entendiéndose como mantener el libro de ingresos y egresos al día, mantener todas la boletas del CAM y todo lo que compruebe las cuentas realizadas. Tener la contabilidad del CAM a disposición de la Directiva y miembros del Consejo Estudiantil cuando este lo estime conveniente.
+        \item Llevar la contabilidad del CAM, entendiéndose como mantener el libro de ingresos y egresos al día, mantener todas la boletas del CAM y todo lo que compruebe las cuentas realizadas. Tener la contabilidad del CAM a disposición de todo estudiante representado.
         \item Presentar un informe trimestral de haberes.
         \item Administrar la cuenta de ahorros y/o corriente del CAM, si existiere.
         \item Administrar los fondos de becas del CAM.
@@ -277,6 +277,7 @@
         \item Ayudar a la Directiva en las actividades que se realicen para la comunidad, tanto en la realización como en su difusión.
         \item Difundir información que el CAM entregue al nivel que pertenezca.
         \item Asistir a los Consejos Estudiantiles que se convoquen.
+        \item Difundir, con debida anticipación, las convocatorias de los Consejos Estudiantiles.
     \end{enumerate}
 \end{art}
 
@@ -288,15 +289,11 @@
     Son deberes de la Consejería Académica:
     \begin{enumerate}
         \item Asistir a los comités curriculares de la Facultad, según lo establecido en la Normativa de Comités Curriculares de la Vicerrectoría Académica.
-        \item Asistir a los Consejos Académicos.
+        \item Asistir a los Consejos de Facultad.
         \item Estudiar y desarrollar proyectos y propuestas académicas para el alumnado. También organizar actividades dirigidas al bienestar de los estudiantes representados, y mantener constante contacto con estos.
         \item Estar al tanto e informar al alumnado sobre el proceso de permanencia.
         \item Asistir a los estudiantes representados en problemas de índole académica, como evaluaciones o cargas académicas, llevando a la correcta gestión de estos.
     \end{enumerate}
-\end{art}
-
-\begin{art}\label{atribucionesConsejeriaAcademica}
-    Es una atribución del Consejero Académico elegir un Subconsejero Académico, bajo previa aprobación del Consejo Estudiantil.
 \end{art}
 
 \begin{art}\label{funcionesConsejeroTerritorial}
@@ -306,8 +303,8 @@
 \begin{art}\label{funcionesConsejoEstudiantil}
     Son funciones y atribuciones del Consejo Estudiantil:
     \begin{enumerate}
-        \item Elegir un director de Consejo entre los integrantes que conformen dicho Consejo, quien moderará el Consejo.
-        \item Elegir un secretario entre los integrantes que conformen dicho Consejo, quien llevará actas del Consejo para su posterior registro. Las actas quedarán a libre disposición del estudiantado.
+        \item Elegir un director de Consejo entre sus integrantes, quien moderará sus sesiones.
+        \item Elegir un secretario entre sus integrantes, quien llevará las actas del Consejo para su posterior registro. Las actas quedarán a libre disposición de todo estudiante representado.
         \item Velar por el buen trabajo del CAM.
         \item Proponer y modificar proyectos.
         \item Votar sobre proyectos que el CAM proponga.
@@ -354,27 +351,27 @@
     La Directiva CAM se elegirá anualmente por medio de una votación como se describe en la sección \ref{votaciones}.
 \end{art}
 
-\begin{art}\label{eleccionesCAMPostulacion}
-    Cada lista postulante tendrá que designar a un integrante por cada posición de la Directiva. Además, para formalizar la inscripción se debe hacer llegar la lista con todos los integrantes a la Directiva en ejercicio.
+\begin{art}\label{eleccionesDirectivaPostulacion}
+    Cada lista postulante tendrá que designar a un integrante por cada cargo de la Directiva, teniendo la opción de postular su respectivo Consejo Ejecutivo. Además, para formalizar la inscripción se debe hacer llegar la lista con todos los integrantes a la Directiva en ejercicio.
 \end{art}
 
-\begin{art}\label{eleccionesCAMFechas}
+\begin{art}\label{eleccionesDirectivaFechas}
     El proceso de elecciones comenzará con anuncio electoral por parte de la Directiva que, con una antelación mínima de cinco días hábiles, fijará el inicio de los plazos de inscripción, que tendrán lugar durante la segunda semana de octubre. Las elecciones se realizarán entre cinco y ocho días hábiles tras el fin de la inscripción y estarán bajo la supervisión del TRICEL según lo disponen los presentes estatutos.
 \end{art}
 
-\begin{art}\label{eleccionesCAMPublicacion}
-    Al término del proceso de inscripción el Secretario General deberá publicar en los medios oficiales las listas de candidatos y sus respectivos programas.
+\begin{art}\label{eleccionesDirectivaPublicacion}
+    Al término del proceso de inscripción quien tenga el cargo de la Secretaría General deberá publicar en los medios oficiales las listas de candidatos y sus respectivos programas.
 \end{art}
 
-\begin{art}\label{eleccionesCAMInscripcion}
+\begin{art}\label{eleccionesDirectivaInscripcion}
     Si una vez cumplido el plazo de inscripción no hay postulaciones, el Consejo Estudiantil decidirá si agregará un plazo extraordinario de a lo más cinco días hábiles o designar una Directiva interina compuesta por miembros del Consejo Estudiantil.
 \end{art}
 
-\begin{art}\label{eleccionesCAMFalla}
-    En caso de no tener postulaciones o de ser rechazadas las listas, se designará una Directiva interina tal como lo menciona el artículo \ref{eleccionesCAMInscripcion}, ejerciendo en sus cargos hasta una nueva convocatoria, que se realizará el siguiente año junto con la elección de delegados.
+\begin{art}\label{eleccionesDirectivaFalla}
+    En caso de no tener postulaciones o de ser rechazadas las listas, se designará una Directiva interina tal como lo menciona el artículo \ref{eleccionesDirectivaInscripcion}, ejerciendo en sus cargos hasta una nueva convocatoria, que se realizará el siguiente año junto con la elección de delegados.
 \end{art}
 
-\begin{art}\label{eleccionesCAMVotacion}
+\begin{art}\label{eleccionesDirectivaVotacion}
     Para que la elección tenga validez se debe cumplir con los puntos descritos en la sección \ref{votaciones}.
 \end{art}
 
@@ -385,7 +382,7 @@
 \end{art}
 
 \begin{art}\label{eleccionesConsejeriaFalla}
-    Si al final del plazo de inscripción no hay postulaciones, se agregará un plazo extraordinario de a lo más cinco días hábiles. En caso de no haber una postulación en este plazo extraordinario, se considerará el puesto vacante y se seguirá lo descrito en el artículo \ref{vacanciasConsejero}.
+    Si al final del plazo de inscripción no hay postulaciones, se agregará un plazo extraordinario de a lo más cinco días hábiles. En caso de no haber una postulación en este plazo extraordinario, o que se rechacen las postulaciones, se considerará el puesto vacante y se seguirá lo descrito en el artículo \ref{vacanciasConsejero}.
 \end{art}
 
 \begin{art}\label{eleccionesConsejeriaVotacion}
@@ -395,16 +392,21 @@
 \subsection{De la elección de los Delegados}\label{eleccionesDelegados}
 
 \begin{art}\label{eleccionesDelegadosFecha}
-    La elección de Delegados será la segunda semana de abril. La fecha exacta la dispondrá la Directiva al mando y no durará más de cinco días hábiles.
+    La elección de Delegados será la segunda semana de abril, y no durará más de cinco días hábiles. La fecha exacta la dispondrá la Directiva al mando.
 \end{art}
 
 \begin{art}\label{eleccionesDelegadosCandidatos}
     Todo estudiante representado podrá postularse a ser Delegado del grupo que le corresponda, dentro de los mencionados en el articulo \ref{normasGenerales} punto iii. Las votaciones se llevarán a cabo como se describe en la subsección \ref{votacionesDelegados}.
 \end{art}
 
-\begin{art}\label{eleccionesDelegadosFalla}
-    En caso de que en alguna generación no exista una postulación, el Secretario General deberá suplir las funciones del Delegado correspondiente hasta que la Directiva asigne algún representante.
+\begin{art}\label{eleccionesDelegadosPostulacionFalla}
+    Si en alguna generación no exista una postulación, quien tenga el cargo de la Secretaría General deberá suplir las funciones del Delegado correspondiente hasta que la Directiva asigne algún representante.
 \end{art}
+
+\begin{art}\label{eleccionesDelegadosFalla}
+    Si en alguna generación se rechazan todas las postulaciones, el puesto quedará vacante, y se seguirá lo descrito en el artículo \ref{vacanciasConsejoDelegados}.
+\end{art}
+
 
 \subsection{De la elección del TRICEL}
 
@@ -413,7 +415,7 @@
 \end{art}
 
 \begin{art}\label{eleccionesTRICELCandidatos}
-    Todo estudiante representado podrá postularse a ser miembro del TRICEL. Las votaciones se llevarán acabo como se describe en la subsección \ref{votacionesTRICEL}
+    Todo estudiante representado que no ocupe cargos dentro del CAM, podrá postularse a ser miembro del TRICEL. Las votaciones se llevarán acabo como se describe en la subsección \ref{votacionesTRICEL}
 \end{art}
 
 \section{Del Tribunal Calificador de Elecciones (TRICEL)}\label{TRICEL}
@@ -437,7 +439,7 @@
         \item Determinar si el universo de votantes de una votación incluye a los estudiantes representados de postgrado, previa consulta con el delegado de postgrado.
         \item Atender, investigar y resolver los reclamos y observaciones presentadas con respecto al proceso de votación por cualquier estudiante representado.
         \item Determinar, publicar, solicitar y distribuir el material necesario para la implementación de las votaciones.
-        \item Garantizar la presencia de personal idóneo para el buen desempeño del proceso electoral. Para ello, el TRICEL podrá seleccionar a quienes estime convenientes para que preste ayuda en el mencionado proceso. Dicho personal no podrá estar integrado por ningún miembro que ejerza o sea candidato a alguno de los cargos a los que hace referencia la sección 3 de los presentes estatutos.
+        \item Garantizar la presencia de personal idóneo para el buen desempeño del proceso electoral. Para ello, el TRICEL podrá seleccionar a quienes estime convenientes para que preste ayuda en el mencionado proceso. Dicho personal no podrá estar integrado por ningún miembro que ejerza o sea candidato a alguno de los cargos a los que hace referencia el artículo \ref{organismosDirectivos} de los presentes estatutos.
     \end{enumerate}
 \end{art}
 
@@ -481,8 +483,8 @@
 \begin{art}\label{vacanciasDirectivaMiembro}
     En caso de que un integrante de la Directiva no proponga un reemplazante, o que el reemplazo no sea aprobado, este puesto será reemplazado de la siguiente forma:
     \begin{enumerate}
-        \item Si el cargo es ejecutivo (i.e. Presidente, Vicepresidente Interno, Vicepresidente Externo) este será reemplazado por el siguiente cargo ejecutivo en la línea de sucesión, la cual por defecto será, en orden, Presidente, Vicepresidente Interno y por último Vicepresidente Externo.
-        \item Si el cargo es administrativo (i.e. Secretario, Tesorero) este será reemplazado por el siguiente cargo administrativo en la línea de sucesión, la cual por defecto será, en orden, Secretario y por último Tesorero.
+        \item Si el cargo es ejecutivo (i.e. Presidencia, Vicepresidencia Interna, Vicepresidencia Externa) este será reemplazado por el siguiente cargo ejecutivo en la línea de sucesión, la cual por defecto será, en orden, Presidencia, Vicepresidencia Interna y por último Vicepresidencia Externa.
+        \item Si el cargo es administrativo (i.e. Secretaría, Tesorería) este será reemplazado por el siguiente cargo administrativo en la línea de sucesión, la cual por defecto será, en orden, Secretaría y por último Tesorería.
         \item En caso de que el último cargo de alguna de las líneas de sucesión quede vacío se sigue en orden alfabético los puntos descritos a continuación. Además, en todos los casos debe ser aprobado por el Consejo Estudiantil con una votación de mayoría simple:
               \begin{enumerate}[label=(\alph*)]
                   \item La Directiva puede proponer un miembro del Consejo Ejecutivo.
@@ -494,15 +496,15 @@
 \end{art}
 
 \begin{art}\label{vacanciasDirectivaPlazos}
-    La renuncia de un integrante de la directiva debe ser presentada con una semana de anticipación, excepto en el caso de la tesorería donde esta necesitará un plazo extra de dos semanas, para facilitar el proceso de cambio administrativo.
+    La renuncia de un integrante de la directiva debe ser presentada con una semana de anticipación, excepto en el caso de la Tesorería donde esta necesitará un plazo extra de dos semanas, para facilitar el proceso de cambio administrativo.
 \end{art}
 
 \begin{art}\label{vacanciasDirectivaCompleta}
-    En caso de quedar vacante la posición de toda la Directiva asumirá el Consejo Estudiantil en forma de una Directiva interina\footnote{Ver artículo \ref{eleccionesCAMInscripcion}}, y se llamará a elecciones inmediatamente después de la renuncia. En caso de que la renuncia sea el primer semestre, la Directiva electa terminará el período en curso, en caso contrario, la Directiva electa asume el período en curso y además un período completo.
+    En caso de quedar vacante la posición de toda la Directiva asumirá el Consejo Estudiantil en forma de una Directiva interina\footnote{Ver artículo \ref{eleccionesDirectivaInscripcion}}, y se llamará a elecciones inmediatamente después de la renuncia. En caso de que la renuncia sea el primer semestre, la Directiva electa terminará el período en curso, en caso contrario, la Directiva electa asume el período en curso y además un período completo.
 \end{art}
 
 \begin{art}\label{vacanciasConsejero}
-    En caso de quedar vacante la posición del consejero académico, el cargo lo asume el subconsejero académico, y en caso de la ausencia de éste, lo asume el vicepresidente interno, quedando con ambos cargos.
+    En caso de quedar vacante la posición del consejero académico, el cargo lo asume el subconsejero académico, y en caso de la ausencia de éste, lo asume quien tenga el cargo de la  Vicepresidencia Interna, quedando con ambos cargos.
 \end{art}
 
 \begin{art}\label{vacanciasConsejoDelegados}
@@ -510,7 +512,7 @@
 \end{art}
 
 \begin{art}\label{vacanciasConsejoEstudiantil}
-    En caso de quedar vacante la posición del presidente, o el secretario, del Consejo Estudiantil se volverán a elegir estos cargos después de finalizar los procesos de los artículos \ref{renunciasDirectivaMiembro}, \ref{vacanciasDirectivaMiembro}, \ref{vacanciasDirectivaCompleta}, \ref{vacanciasConsejero} y \ref{vacanciasConsejoDelegados}.
+    En caso de quedar vacante la posición del director, o el secretario, del Consejo Estudiantil se volverán a elegir estos cargos después de finalizar los procesos de los artículos \ref{renunciasDirectivaMiembro}, \ref{vacanciasDirectivaMiembro}, \ref{vacanciasDirectivaCompleta}, \ref{vacanciasConsejero} y \ref{vacanciasConsejoDelegados}.
 \end{art}
 
 \section{Votaciones}\label{votaciones}
@@ -547,10 +549,10 @@
     La votación para la elección de la Directiva tiene como mínimo de aprobación necesaria de 40\%.
 \end{art}
 
-\subsection{Votaciones Consejería Académica}
+\subsection{Votaciones Consejería Académica}\label{votacionesConsejeriaAcademica}
 
 \begin{art}\label{}
-    En la votación para la elección de la Consejería Académica se tienen dos universos de votantes separados, compuestos por estudiantes representados de la carrera de Matemáticas y de la carrera de Estadística correspondientemente. Para cada universo de votantes se harán votaciones, las cuales serán llevadas a cabo en paralelo.
+    En la votación para la elección de la Consejería Académica se tienen tres universos de votantes separados, compuestos por estudiantes representados de la carrera de Matemáticas, de la carrera de Estadística y de la carrera de Ciencias de Datos, correspondientemente. Para cada universo de votantes se harán votaciones, las cuales serán llevadas a cabo en paralelo.
 \end{art}
 
 \subsection{Votaciones Delegados}\label{votacionesDelegados}
@@ -566,9 +568,11 @@
 \subsection{Votaciones TRICEL}\label{votacionesTRICEL}
 
 \begin{art}\label{}
-    El sistema electoral para la elección de los miembros del TRICEL se describe a continuación.\\
-    Se votará individualmente por cada candidato donde las opciones serán Apruebo o Rechazo. Luego, se escogerán, a lo más, los cuatro candidatos que hayan obtenido mayor aprobación de los que hayan obtenido el mínimo de aprobación.\\
-    Sin embargo, en caso de que cuatro miembros electos sean de la misma carrera y que haya al menos un candidato de la otra carrera que haya obtenido el mínimo de aprobación, se elegirá la primera mayoría de estos últimos como quinto miembro.
+    El sistema electoral para la elección de los miembros del TRICEL se describe a continuación.
+    \begin{enumerate}
+        \item Se votará individualmente por cada candidato donde las opciones serán Apruebo o Rechazo. Luego, se escogerán, a lo más, los cuatro candidatos que hayan obtenido mayor aprobación de los que hayan obtenido el mínimo de aprobación.
+        \item En el caso de que las primeras cuatro mayorías sean de la misma carrera y exista un candidato con el mínimo de aprobación de alguna de las otras carreras, entonces se elegirá la primera mayoría de estos últimos como quinto miembro.
+    \end{enumerate}
 \end{art}
 
 \subsection{Del Plebiscito}\label{plebiscito}
@@ -598,10 +602,6 @@
     En caso de que el plebiscito no sea válido, este no tendrá carácter vinculante.
 \end{art}
 
-\begin{art}\label{}
-    El plebiscito estará a cargo de la Directiva, y el TRICEL ofrecerá, del modo en que lo estime más conveniente, testigos para los recuentos parciales y totales. Dichos testigos no podrán pertenecer ni ser candidatos a los cargos a los que hace referencia la sección \ref{normasGenerales} de los presentes estatutos.
-\end{art}
-
 \section{Vocalías}\label{vocalias}
 \begin{art}\label{}
     Las vocalías son organismos independientes creadas con un enfoque específico.
@@ -612,9 +612,23 @@
 \end{art}
 
 \begin{art}\label{}
-    Como organismo independiente, estas pueden conseguir financiamiento propio y/o solicitar apoyo financiero formalmente a la Directiva, llámese, tiene  que haber una postulación escrita con un proyecto asociado; la cantidad de apoyo necesario y las formas en las que se usará este apoyo; y las firmas de todos los integrantes. El apoyo solicitado tiene que ser aprobado por el Consejo Estudiantil y la Directiva.
+    Como organismo independiente, estas pueden conseguir financiamiento propio y/o solicitar apoyo financiero formalmente a la Directiva.
 \end{art}
 
+\begin{art}\label{vocaliasSolicitud}
+    En caso de acudir a la Directiva por apoyo financiero, debe enviarse una solicitud escrita que incluya:
+    \begin{enumerate}
+        \item Proyecto asociado.
+        \item Monto a solicitar.
+        \item Metodología de implementación.
+        \item Firmas de todos los integrantes.
+    \end{enumerate}
+    La solicitud tiene que ser aprobada por el Consejo Estudiantil y la Directiva.
+\end{art}
+
+\begin{art}\label{}
+    Si la solicitud especificada en el artículo \ref{vocaliasSolicitud} es aprobada, se deberá presentar respaldo del uso de los fondos cada tres meses desde su adjudicación, o cuando se finalice el proyecto asociado.
+\end{art}
 
 \section{De los Estatutos}\label{estatutos}
 
@@ -660,8 +674,8 @@
     En caso de que se detecte una incompatibilidad entre normas de los presentes estatutos, esta incompatibilidad será presentada en Asamblea General para que ésta se pronuncie sobre ella y entregue una solución, como se describe en el artículo \ref{estatutosInterpretacion}. Además, se creará una comisión según lo descrito en el artículo \ref{estatutosComision} con la finalidad de solucionar esta incompatibilidad.
 \end{art}
 
-\begin{art}\label{estatutosPublicaciónReformas}
-    El Secretario General tendrá la responsabilidad de publicar los cambios respectivos a más tardar tres días hábiles una vez aprobada la reforma.
+\begin{art}\label{}
+    Se deberá mantener un historial de cambios y propuestas, tanto aprobadas como rechazadas, de los estatutos en la plataforma GitHub (\url{https://github.com/CAM-UC/Estatutos}). La administración de este historial será responsabilidad de quien tenga el cargo de la Secretaría General, o de un estudiante representado aprobado por el Consejo Estudiantil, el cual deberá usar el sistema de ``pull requests'' y ``branches'' para mantener de manera ordenada los cambios realizados y propuestos, detallándolos de la mejor manera posible.
 \end{art}
 
 \begin{art}\label{estatutosInterpretacion}
@@ -671,14 +685,10 @@
 % TODO Considerar convenciones en la documentación y los cambios de los estatutos para facilitar las futuras reformas y la documentación de los cambios.
 
 \section{Disposiciones Transitorias}\label{transitorias}
-\begin{artt}\label{}
-    Se deberá mantener un historial de cambios y propuestas, tanto aprobadas como rechazadas, de los estatutos en la plataforma GitHub (\url{https://github.com/CAM-UC/Estatutos}). La administración de este historial será responsabilidad del Secretario General, o de un estudiante aprobado por el Consejo Estudiantil, el cual deberá usar el sistema de “pull requests” y “branches” para mantener de manera ordenada los cambios realizados y propuestos, detallándolos de la mejor manera posible.
-\end{artt}
 
 \begin{artt}\label{}
-    La Directiva propondrá un TRICEL transitorio que actuará en única instancia para la elección de un primer TRICEL. %(Bernardo Mundaca y Nicolás Vilches)
+    La Consejería Académica de la carrera de Ciencias de Datos se constituará solo si existen al menos dos generaciones de la misma. Ambas Consejerías (Matemática y Estadística) suplirán este cargo hasta que se constituya. Esta disposición podrá ser renovada una vez por ratificación del Consejo Estudiantil.
 \end{artt}
-
 % * La siguiente parte corresponde a la documentación de futuras y la presente reforma.
 % * Todo equipo correspondiente a una reforma deberá añadirse abajo incluyendo la información pertinente (e.g. mes, año, miembros del equipo en cuestión)
 \newpage
@@ -687,5 +697,12 @@ Elías Alvear, Sebastián Avendaño, Matías Bruna, María Catalina Cárdenas, �
 \begin{sloppypar}
     Facultad de Matemáticas, Pontificia Universidad Católica de Chile\\
     Santiago, Julio de 2020
+\end{sloppypar}
+\ \\
+\textsc{Modificados por Comisión para Data Science:}
+Camila Guajardo, Nicholas Mc-Donnell, José Antonio Montenegro, Bernardo Mundaca, Javier Reyes y Juan Pablo Vega
+\begin{sloppypar}
+    Facultad de Matemáticas, Pontificia Universidad Católica de Chile\\
+    Santiago, Diciembre 2020
 \end{sloppypar}
 \end{document}
