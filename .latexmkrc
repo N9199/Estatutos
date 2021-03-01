@@ -1,4 +1,4 @@
-@default_files = ('Estatutos CEFMAT.tex');
+@default_files = ('Estatutos_CEFMAT.tex');
 $pdf_mode = 4;
 $lualatex = "lualatex %O %S";
 $postscript_mode = $dvi_mode = 0;

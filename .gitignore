@@ -248,9 +248,9 @@ TSWLatexianTemp*
 .DS_STORE
 *.tmp
 __latexindent_temp.tex
-Estatutos CEFMAT.html
-Estatutos CEFMAT2.html
-Estatutos CEFMAT.css
+Estatutos_CEFMAT.html
+Estatutos_CEFMAT2.html
+Estatutos_CEFMAT.css
 
 # Permitir los estatutos!
-!Estatutos CEFMAT.pdf
+!Estatutos_CEFMAT.pdf
