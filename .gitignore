@@ -240,3 +240,17 @@ TSWLatexianTemp*
 
 # generated if using elsarticle.cls
 *.spl
+
+# no subir automáticamente los cambios del PDF
+*pdf
+
+# Otros
+.DS_STORE
+*.tmp
+__latexindent_temp.tex
+Estatutos CEFMAT.html
+Estatutos CEFMAT2.html
+Estatutos CEFMAT.css
+
+# Permitir los estatutos!
+!Estatutos CEFMAT.pdf
