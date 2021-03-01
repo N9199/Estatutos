@@ -19,6 +19,7 @@ jobs:
           make4ht -d docs/ -u -l -c web.cfg "Estatutos_CEFMAT.tex"
       - name: Preparar documento para repositorio
         run: |
+          ls
           git config --local user.email "action@github.com"
           git config --local user.name "CEFMATBot"
           git diff --quiet && git diff --staged --quiet || git commit -am 'Compilar: ${{ github.event.head_commit.message }}'
