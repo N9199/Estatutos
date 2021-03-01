@@ -22,6 +22,7 @@ jobs:
           ls
           git config --local user.email "action@github.com"
           git config --local user.name "CEFMATBot"
+          git add -A
           git diff --quiet && git diff --staged --quiet || git commit -am 'Compilar: ${{ github.event.head_commit.message }}'
       - name: Enviar cambios al repositorio
         uses: ad-m/github-push-action@master
