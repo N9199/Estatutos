@@ -16,7 +16,7 @@ jobs:
         # We can't use latexmk directly because the latexmk included with ubuntu-latest is too old.
         run: |
           TZ='America/Santiago' latexmk -lualatex
-          make4ht -d docs/ -u -l -c web.cfg Estatutos CEFMAT.tex
+          make4ht -d docs/ -u -l -c web.cfg "Estatutos CEFMAT.tex"
       - name: Preparar documento para repositorio
         run: |
           git config --local user.email "action@github.com"
